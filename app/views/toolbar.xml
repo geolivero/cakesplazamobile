@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="toobar">
+    <Label id="title" class="sans"></Label>
+    
+    <Button id="search_btn"></Button>
+    <Button id="menu_btn"></Button>
+	</View>
+</Alloy>
