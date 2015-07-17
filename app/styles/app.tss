@@ -1,0 +1,37 @@
+'.layoutContainer[platform=ios formFactor=handheld]' : {
+  top: '20dp'
+}
+'.sans_condensed': {
+  font: {
+    fontFamily: 'OpenSans-CondensedLight'
+  }
+}
+'.sans': {
+  font: {
+    fontFamily: 'OpenSans-Light'
+  }
+}
+'.titleLarge': {
+  font: {
+    fontSize: '35dp'
+  },
+  color: Alloy.Globals.styles.color.darkBrown
+}
+'.titleMedium': {
+  font: {
+    fontSize: '25dp'
+  },
+  color: Alloy.Globals.styles.color.darkBrown
+}
+'.headTitle': {
+  left: '10dp',
+  top: '10dp'
+}
+'.mSubTitle': {
+  left: '10dp',
+  top: '10dp'
+}
+'.subTitle': {
+  left: '10dp',
+  top: '50dp'
+}

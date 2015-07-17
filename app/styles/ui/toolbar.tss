@@ -1,4 +1,27 @@
+'.toolbar' : {
+  top: 0,
+  height: '60dp',
+  width: Ti.UI.FILL,
+  left: 0,
+  backgroundColor: Alloy.Globals.styles.color.oDark
+}
+'#titleBar': {
+  left: '5dp',
+  color: 'white',
+  font: {
+    fontSize: '14dp'
+  }
+}
+'#searchBtn': {
+  backgroundImage: '/images/search_icon.png',
+  width: '21dp',
+  height: '20dp',
+  right: '50dp'
 
-".container" : {
-  
+}
+'#menuBtn': {
+  backgroundImage: '/images/hamb_icon.png',
+  width: '21dp',
+  height: '17dp',
+  right: '10dp'
 }

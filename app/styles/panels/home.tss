@@ -1,0 +1,58 @@
+'#firstPanel': {
+  height: Alloy.Globals.styles.box.height,
+  width: Ti.UI.FILL,
+  backgroundImage: 'images/home.png',
+  backgroundSize: 'cover',
+  top: 0
+},
+'.scrollView': {
+  height: Ti.UI.FILL,
+  top: 0,
+  backgroundColor: Alloy.Globals.styles.color.darkBrown
+}
+'#logo': {
+  width: '122dp',
+  height: '130dp'
+}
+'#chooseOptions': {
+  top: Alloy.Globals.styles.box.height100min,
+  left: 0,
+  height: Ti.UI.SIZE
+}
+'#titleOptions': {
+  height: '100dp',
+  top: 0,
+  backgroundColor: Alloy.Globals.styles.color.lightPink
+}
+'.btnChoose': {
+  height: '235dp',
+  backgroundColor: Alloy.Globals.styles.color.darkBrown
+}
+'#optSearch': {
+  top: '100dp'
+}
+'#optBakker': {
+  top: '335dp',
+  backgroundColor: Alloy.Globals.styles.color.sDarkBrown
+}
+'.circle': {
+  borderRadius: '48dp',
+  width: '96dp',
+  height: '96dp',
+  top: '30dp',
+  backgroundColor: Alloy.Globals.styles.color.sDarkBrown
+}
+'#bakerIcon': {
+  backgroundColor: Alloy.Globals.styles.color.darkBrown
+}
+'.titleMedium': {
+  color: Alloy.Globals.styles.color.lightPink,
+  top: '130dp'
+}
+'.titleSub': {
+  color: Alloy.Globals.styles.color.lightPink,
+  top: '165dp',
+}
+'#iconArrow': {
+  right: '10dp'
+}

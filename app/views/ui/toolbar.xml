@@ -1,4 +1,10 @@
 <Alloy>
-	<View class="container">
+	<View class="toolbar">
+    <View class="layoutContainer">
+      <Label id="titleBar" class="sans">Im the label</Label>
+      <Button id="searchBtn"></Button>
+      <Button id="menuBtn"></Button>
+    </View>
+    
 	</View>
 </Alloy>

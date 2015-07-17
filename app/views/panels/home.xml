@@ -1,0 +1,41 @@
+<Alloy>
+	<ScrollView class="container scrollView">
+    <View module="ui" id="firstPanel">
+      <ImageView image="/images/logo.png" id="logo" />
+    </View>
+
+    <View id="chooseOptions">
+      <View id="titleOptions">
+        <Label class="title sans_condensed titleLarge headTitle" id="optionTitle">
+          BEGIN HIER
+        </Label>
+        <Label class="subTitle sans title">
+          start mer ervaren
+        </Label>
+      </View>
+      <View class="btnChoose" id="optSearch">
+        <View class="circle" id="searchIcon">
+          <ImageView image="/images/icon_cake.png" width="29dp" height="32dp" />
+        </View>
+  color: Alloy.Globals.styles.color.darkBrown
+        <Label class="title sans_condensed titleMedium">
+          IK WILL TAART
+        </Label>
+        <Label class="title sans titleSub">
+          zoek of vraag offertes bij bakkers
+        </Label>
+      </View>
+      <View class="btnChoose" id="optBakker">
+        <View class="circle" id="bakerIcon">
+          <ImageView image="/images/icon_roller.png" width="47dp" height="11dp" />
+        </View>
+        <Label class="title sans_condensed titleMedium">
+          IK BAK TAART
+        </Label>
+        <Label class="title sans titleSub">
+          Plaats jouw eigen taart
+        </Label>
+      </View>
+    </View>
+	</ScrollView>
+</Alloy>
