@@ -32,6 +32,6 @@
   top: '10dp'
 }
 '.subTitle': {
-  left: '10dp',
+  left: '13dp',
   top: '50dp'
 }

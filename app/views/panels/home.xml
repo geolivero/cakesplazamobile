@@ -1,4 +1,5 @@
 <Alloy>
+  <Collection src="bakers" />
 	<ScrollView class="container scrollView">
     <View module="ui" id="firstPanel">
       <ImageView image="/images/logo.png" id="logo" />
@@ -36,6 +37,27 @@
           Plaats jouw eigen taart
         </Label>
       </View>
+      <View id="bestBakersTitle">
+        <Label id="favoBakersTitle" class="title sans_condensed titleLarge headTitle" id="optionTitle">
+          ONZE FAVORITE BAKKERS
+        </Label>
+        <Label id="geselecteerdSubTitle" class="subTitle sans title">
+          wij hebben alvast leuke bakkers geselecteerd
+        </Label>
+      </View>
+      
+      <!-- <TableView id="bestBakers" dataCollection="bakers" dataTransform="dataTransform" dataFilter="dataFilter">
+          <TableViewRow class="row_el">
+            <View module="ui" class="cakePic" backgroundImage="{cake_pic}" />
+
+            <View class="rowTitle">
+              <Label class="sans_condensed titleMedium title bissName">{bizzName}</Label>
+            </View>
+            <View module="ui" class="bakersLogo" backgroundImage="{logo}" />
+          </TableViewRow>
+      </TableView> -->
+
     </View>
+
 	</ScrollView>
 </Alloy>

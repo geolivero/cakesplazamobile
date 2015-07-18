@@ -17,6 +17,7 @@
 '#chooseOptions': {
   top: Alloy.Globals.styles.box.height100min,
   left: 0,
+  layout:'vertical',
   height: Ti.UI.SIZE
 }
 '#titleOptions': {
@@ -28,11 +29,7 @@
   height: '235dp',
   backgroundColor: Alloy.Globals.styles.color.darkBrown
 }
-'#optSearch': {
-  top: '100dp'
-}
 '#optBakker': {
-  top: '335dp',
   backgroundColor: Alloy.Globals.styles.color.sDarkBrown
 }
 '.circle': {
@@ -55,4 +52,56 @@
 }
 '#iconArrow': {
   right: '10dp'
+}
+
+'#favoBakersTitle': {
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  left: '10dp',
+  right: '10dp',
+  width: Ti.UI.FILL
+}
+'#geselecteerdSubTitle': {
+  right: '80dp',
+  left: '80dp',
+  top: '55dp',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+'#bestBakersTitle': {
+  height: '130dp',
+  left: 0,
+  width: Ti.UI.FILL,
+  backgroundColor: 'white'
+}
+'#bestBakers': {
+  height: Ti.UI.SIZE,
+  backgroundColor: 'white'
+}
+'.bissName': {
+  top: '35dp',
+  color: Alloy.Globals.styles.color.darkBrown
+}
+'.row_el': {
+  height: '355dp',
+  layout:'vertical',
+  backgroundColor: 'white'
+},
+'.cakePic': {
+  height: '260dp',
+  width: Ti.UI.FILL,
+  backgroundSize: 'cover',
+  backgroundColor: Alloy.Globals.styles.color.lightPink
+}
+'.rowTitle': {
+  height: '95dp',
+  backgroundColor: Alloy.Globals.styles.color.lightPink
+}
+'.bakersLogo': {
+  top: '-140dp',
+  borderRadius: '38dp',
+  backgroundColor: 'white',
+  width: '76dp',
+  borderColor: 'white',
+  borderWidth: '4dp',
+  backgroundSize: 'cover',
+  height: '76dp'
 }

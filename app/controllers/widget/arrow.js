@@ -1,19 +1,35 @@
-var args = arguments[0] || {};
+var args = arguments[0] || {},
+  stopAnim;
 
 args.top = args.top || 10;
 
-console.log(args.top);
 function startAnim () {
-  $.arrow.animate({
-    top: (args.top - 20) + 'dp',
-    duration: 500
-  }, function () {
+  /*if (stopAnim) {
+    return;
+  }
+  setTimeout(function () {
     $.arrow.animate({
-      top: args.top + 'dp',
+      top: (args.top - 20) + 'dp',
       duration: 500
-    }, startAnim);
-  });
+    }, function () {
+      setTimeout(function () {
+        $.arrow.animate({
+          top: args.top + 'dp',
+          duration: 500
+        }, startAnim);
+      }, 50);
+    });
+  }, 50);*/
+  
 }
 
-startAnim();
+exports.stop = function () {
+  stopAnim = true;
+  $.arrow.animate({
+    top: args.top + 'dp',
+    duration: 0
+  });
+};
+
+exports.start = startAnim;
 
