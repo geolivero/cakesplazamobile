@@ -3,27 +3,23 @@ var args = arguments[0] || {},
 
 args.top = args.top || 10;
 
-function startAnim () {
-  /*if (stopAnim) {
+function startAnim() {
+  if (stopAnim) {
     return;
   }
-  setTimeout(function () {
+  $.arrow.animate({
+    top: (args.top - 20) + 'dp',
+    duration: 500
+  }, function() {
     $.arrow.animate({
-      top: (args.top - 20) + 'dp',
+      top: args.top + 'dp',
       duration: 500
-    }, function () {
-      setTimeout(function () {
-        $.arrow.animate({
-          top: args.top + 'dp',
-          duration: 500
-        }, startAnim);
-      }, 50);
-    });
-  }, 50);*/
-  
+    }, startAnim);
+  });
+
 }
 
-exports.stop = function () {
+exports.stop = function() {
   stopAnim = true;
   $.arrow.animate({
     top: args.top + 'dp',
@@ -31,5 +27,6 @@ exports.stop = function () {
   });
 };
 
-exports.start = startAnim;
-
+exports.start = function () {
+  setTimeout(startAnim, 50);
+};

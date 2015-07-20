@@ -32,6 +32,9 @@
 '#optBakker': {
   backgroundColor: Alloy.Globals.styles.color.sDarkBrown
 }
+'.blockTitle': {
+  color: Alloy.Globals.styles.color.lightPink
+}
 '.circle': {
   borderRadius: '48dp',
   width: '96dp',
@@ -76,20 +79,22 @@
   height: Ti.UI.SIZE,
   backgroundColor: 'white'
 }
+'.no_logo': {
+  visible: false
+}
 '.bissName': {
   top: '35dp',
   color: Alloy.Globals.styles.color.darkBrown
 }
 '.row_el': {
-  height: '355dp',
+  height: Alloy.Globals.styles.box.heightBoxBaker,
   layout:'vertical',
   backgroundColor: 'white'
 },
 '.cakePic': {
-  height: '260dp',
+  height: Alloy.Globals.styles.box.width,
   width: Ti.UI.FILL,
-  backgroundSize: 'cover',
-  backgroundColor: Alloy.Globals.styles.color.lightPink
+  backgroundColor: Alloy.Globals.styles.color.darkBrown
 }
 '.rowTitle': {
   height: '95dp',

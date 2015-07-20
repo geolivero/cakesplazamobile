@@ -11,7 +11,7 @@
           BEGIN HIER
         </Label>
         <Label class="subTitle sans title">
-          start mer ervaren
+          start met ervaren
         </Label>
       </View>
       <View class="btnChoose" id="optSearch">
@@ -19,7 +19,7 @@
           <ImageView image="/images/icon_cake.png" width="29dp" height="32dp" />
         </View>
   color: Alloy.Globals.styles.color.darkBrown
-        <Label class="title sans_condensed titleMedium">
+        <Label class="title sans_condensed titleMedium blockTitle">
           IK WILL TAART
         </Label>
         <Label class="title sans titleSub">
@@ -30,7 +30,7 @@
         <View class="circle" id="bakerIcon">
           <ImageView image="/images/icon_roller.png" width="47dp" height="11dp" />
         </View>
-        <Label class="title sans_condensed titleMedium">
+        <Label class="title sans_condensed titleMedium blockTitle">
           IK BAK TAART
         </Label>
         <Label class="title sans titleSub">
@@ -38,7 +38,7 @@
         </Label>
       </View>
       <View id="bestBakersTitle">
-        <Label id="favoBakersTitle" class="title sans_condensed titleLarge headTitle" id="optionTitle">
+        <Label id="favoBakersTitle" class="title sans_condensed titleLarge headTitle " id="optionTitle">
           ONZE FAVORITE BAKKERS
         </Label>
         <Label id="geselecteerdSubTitle" class="subTitle sans title">
@@ -46,16 +46,16 @@
         </Label>
       </View>
       
-      <!-- <TableView id="bestBakers" dataCollection="bakers" dataTransform="dataTransform" dataFilter="dataFilter">
+      <TableView onClick="openBakersProfile" id="bestBakers" dataCollection="bakers" dataTransform="dataTransform" dataFilter="dataFilter">
           <TableViewRow class="row_el">
-            <View module="ui" class="cakePic" backgroundImage="{cake_pic}" />
+            <View class="cakePic" backgroundImage="{cake_pic}" />
 
             <View class="rowTitle">
               <Label class="sans_condensed titleMedium title bissName">{bizzName}</Label>
             </View>
-            <View module="ui" class="bakersLogo" backgroundImage="{logo}" />
+            <View module="ui" class="bakersLogo {isLogo}" backgroundImage="{logo}" />
           </TableViewRow>
-      </TableView> -->
+      </TableView>
 
     </View>
 

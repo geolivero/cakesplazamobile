@@ -69,14 +69,13 @@ exports.createView = function (args) {
 
   // view using backgroundSize
   if (args.backgroundSize && args.backgroundSize === 'cover' && args.backgroundImage && typeof args.backgroundImage === 'string') {
+
     // rename as private property
     args._backgroundImage = args.backgroundImage;
     delete args.backgroundImage;
 
     // target id available to possibly skip postlayout
     if (args.backgroundTarget) {
-
-      
 
       // rename as private property
       args._backgroundTarget = args.backgroundTarget;
@@ -102,15 +101,11 @@ exports.createView = function (args) {
       delete args.backgroundRotate;
     }
 
-
-
     // no need to wait for postlayout if we know target absolute width & height
     if (_isAbsolute(args.width) && _isAbsolute(args.height)) {
-
       _setBackgroundImage(view, args.width, args.height);
 
     } else {
-
       view.addEventListener('postlayout', _onPostLayout);
     }
 
@@ -150,6 +145,9 @@ function _setBackgroundImage(view, targetWidth, targetHeight) {
   var originalFile,
     targetFile = _getTargetFile(originalPath, targetId);
 
+  if (originalPath.charAt(0) === '/') {
+    //originalPath = originalPath.substr(1);
+  }
 
   if (!targetFile.exists()) {
 
@@ -196,7 +194,6 @@ function _setBackgroundImage(view, targetWidth, targetHeight) {
 function _resizeBackgroundImage(view, targetWidth, targetHeight, originalFile, targetFile) {
 
   if (!originalFile.exists()) {
-
     console.error('[UI] backgroundImage not found: ' + originalFile.nativePath);
     return;
   }
@@ -232,7 +229,7 @@ function _resizeBackgroundImage(view, targetWidth, targetHeight, originalFile, t
   }
 
   // crop, if needed
-  if (resizeWidth !== targetWidth || resizeHeight !== targetHeight) {
+  if (originalBlob && resizeWidth !== targetWidth || resizeHeight !== targetHeight) {
     originalBlob = originalBlob.imageAsCropped({
       width: targetWidth,
       height: targetHeight

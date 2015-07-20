@@ -33,5 +33,6 @@
 }
 '.subTitle': {
   left: '13dp',
-  top: '50dp'
+  top: '50dp',
+  color: Alloy.Globals.styles.color.darkBrown
 }

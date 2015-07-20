@@ -1,10 +1,31 @@
 var args = arguments[0] || {};
 
+
+function openBakersProfile (e) {
+  alert('loaded');
+  var Baker = Alloy.createController('bakers/profile').getView();
+
+  if (OS_IOS) {
+    var slide_it_left = Titanium.UI.createAnimation();
+    slide_it_left.left = 0;
+    slide_it_left.duration = 300;
+    Baker.left = 500;
+
+    Baker.open();
+  } else {
+    Baker.open({
+      activityEnterAnimation: Ti.Android.R.anim.slide_in_left,
+      activityExitAnimation: Ti.Android.R.anim.slide_out_right
+    });
+  }
+}
+
 function dataTransform(model) {
   var transform = model.toJSON();
   transform.bizzName = transform.field_bedrijfsnaam_value || transform.field_naam_value;
   transform.bizzName = transform.bizzName.toUpperCase();
-  transform.logo = transform.logo || transform.cake_pic;
+  transform.logo = transform.logo ? transform.logo.split('?')[0] : '';
+  transform.isLogo = transform.logo ? '' : 'no_logo';
   return transform;
 }
 
@@ -85,8 +106,9 @@ function events() {
 function fetchCollection() {
   Alloy.Globals.Helpers.getCollection('bakers', function() {
     var collection = Alloy.Collections.bakers.getUsersHome();
-    console.log(collection.length);
-    console.log(Alloy.Globals.styles.box.height570height100min);
+    if (OS_ANDROID) {
+      $.bestBakers.height = (collection.length * Alloy.Globals.styles.box.heightBoxBaker.replace('dp', '')) + 'dp';
+    }
   });
 }
 
