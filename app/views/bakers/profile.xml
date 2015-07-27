@@ -1,4 +1,5 @@
 <Alloy>
   <Window class="container">
+      <Require src="ui/toolbar" id="theToolbar"/>
   </Window>
 </Alloy>

@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container">
+    <Button id="btnBack" onClick="goBack">Back</Button>
+	</Window>
+</Alloy>

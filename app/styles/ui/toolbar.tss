@@ -12,12 +12,20 @@
     fontSize: '14dp'
   }
 }
+'#titleBar[platform=ios]': {
+  left: '45dp'
+}
 '#searchBtn': {
   backgroundImage: '/images/search_icon.png',
   width: '21dp',
   height: '20dp',
   right: '50dp'
-
+}
+'#backBtn': {
+  left: 0,
+  top: 0,
+  width: '40dp',
+  height: Ti.UI.FILL
 }
 '#menuBtn': {
   backgroundImage: '/images/hamb_icon.png',

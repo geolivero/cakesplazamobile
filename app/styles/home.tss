@@ -1,0 +1,7 @@
+".container": {
+  backgroundColor:"white",
+  zIndex: 1
+}
+'.container[platform=ios formFactor=handheld]' : {
+  statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT
+},

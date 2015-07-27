@@ -1,7 +1,10 @@
 <Alloy>
 	<View class="toolbar">
     <View class="layoutContainer">
-      <Label id="titleBar" class="sans">Im the label</Label>
+      <View id="backBtn" platform="ios">
+        <ImageView image="/images/btn_back.png" />
+      </View>
+      <Label id="titleBar" class="sans"></Label>
       <Button id="searchBtn"></Button>
       <Button id="menuBtn"></Button>
     </View>

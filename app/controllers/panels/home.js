@@ -2,20 +2,22 @@ var args = arguments[0] || {};
 
 
 function openBakersProfile (e) {
-  alert('loaded');
-  var Baker = Alloy.createController('bakers/profile').getView();
+  var Baker = Alloy.createController('bakers/profile');
 
   if (OS_IOS) {
     var slide_it_left = Titanium.UI.createAnimation();
     slide_it_left.left = 0;
     slide_it_left.duration = 300;
-    Baker.left = 500;
+    Baker.init();
+    Baker.getView().left = Alloy.Globals.styles.box.width;
+    Baker.getView().open(slide_it_left);
 
-    Baker.open();
+    $.parentController.close();
+
   } else {
-    Baker.open({
+    Baker.getView().open({
       activityEnterAnimation: Ti.Android.R.anim.slide_in_left,
-      activityExitAnimation: Ti.Android.R.anim.slide_out_right
+      activityExitAnimation: Ti.Android.R.anim.fade_out
     });
   }
 }
