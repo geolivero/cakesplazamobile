@@ -8,8 +8,8 @@ function openBakersProfile (e) {
     model,
     slideToRight;
 
-  model = Alloy.Collections.bakers.get(e.rowData.uid);
-  console.log(Alloy.Collections.bakers.length);
+  model = Alloy.Collections.bakers.get(0);
+  console.log(typeof model, e.rowData.uid);
   Baker = Alloy.createController('bakers/profile', {
     prevController: 'home'
   })
@@ -86,14 +86,8 @@ function onScroll(e) {
       transform: matrix2d,
       duration: 100
     });
-    /*timer1 = setTimeout(function() {
-      clearTimeout(timer1);
-      
-    }, 50);*/
+
     $.firstPanel.animate(a);
-    /*setTimeout(function() {
-      $.firstPanel.animate(a);
-    }, 50);*/
 
 
   } else if (e.y > 0 && e.y < Alloy.Globals.styles.box.wHeight) {
