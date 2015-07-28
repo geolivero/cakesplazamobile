@@ -47,7 +47,7 @@
       </View>
       
       <TableView onClick="openBakersProfile" id="bestBakers" dataCollection="bakers" dataTransform="dataTransform" dataFilter="dataFilter">
-          <TableViewRow class="row_el">
+          <TableViewRow class="row_el" uid="{uid}">
             <View class="cakePic" backgroundImage="{cake_pic}" />
 
             <View class="rowTitle">

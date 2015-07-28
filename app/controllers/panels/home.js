@@ -2,17 +2,40 @@ var args = arguments[0] || {};
 
 
 function openBakersProfile (e) {
-  var Baker = Alloy.createController('bakers/profile');
+  var Baker,
+    onReady,
+    slideToLeft,
+    model,
+    slideToRight;
+
+  model = Alloy.Collections.bakers.get(e.rowData.uid);
+  console.log(Alloy.Collections.bakers.length);
+  Baker = Alloy.createController('bakers/profile', {
+    prevController: 'home'
+  })
 
   if (OS_IOS) {
-    var slide_it_left = Titanium.UI.createAnimation();
-    slide_it_left.left = 0;
-    slide_it_left.duration = 300;
+    var slideToLeft = Titanium.UI.createAnimation();
+    slideToLeft.left = 0;
+    slideToLeft.duration = 300;
     Baker.init();
     Baker.getView().left = Alloy.Globals.styles.box.width;
-    Baker.getView().open(slide_it_left);
+    Baker.getView().open(slideToLeft);
 
-    $.parentController.close();
+    onReady = function () {
+      $.parentController.getView().close();
+      slideToLeft.removeEventListener('complete', onReady);
+      slideToLeft = null;
+    };
+    
+    slideToLeft.addEventListener('complete', onReady);
+
+    slideToRight = Ti.UI.createAnimation();
+    slideToRight.left = (Alloy.Globals.styles.box.wWidth * -1) + 'dp';
+    slideToRight.duration = 300;
+    $.parentController.getView().animate(slideToRight);
+
+    slideToRight = null;
 
   } else {
     Baker.getView().open({
@@ -97,7 +120,9 @@ function onScroll(e) {
 }
 
 function cleanUp() {
+  $.destroy();
   $.home.removeEventListener('scroll', onScroll);
+  $.bestBakers.removeEventListener('click', openBakersProfile);
 }
 
 function events() {
@@ -126,6 +151,11 @@ exports.cleanUp = cleanUp;
 
 exports.init = function() {
   addElements();
-  fetchCollection();
+  if (!Alloy.Collections.bakers.length) {
+    fetchCollection();
+  } else {
+    Alloy.Collections.bakers.trigger('fetch');
+  }
+  
   events();
 };

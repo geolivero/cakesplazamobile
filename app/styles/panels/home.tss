@@ -89,7 +89,8 @@
 '.row_el': {
   height: Alloy.Globals.styles.box.heightBoxBaker,
   layout:'vertical',
-  backgroundColor: 'white'
+  backgroundColor: 'white',
+  selectedBackgroundColor: 'white'
 },
 '.cakePic': {
   height: Alloy.Globals.styles.box.width,

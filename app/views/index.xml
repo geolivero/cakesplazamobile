@@ -1,6 +1,2 @@
 <Alloy>
-	<Window class="container">
-    <Require src="panels/home" id="theHome"/>
-    <Require src="ui/toolbar" id="theToolbar"/>
-	</Window>
 </Alloy>

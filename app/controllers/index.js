@@ -1,7 +1,4 @@
-function init () {
-  $.theHome.init();
-}
-
+var Home;
 if (typeof exports !== 'undefined') {
   // useful variable to check if we are
   // in TiShadow
@@ -11,16 +8,8 @@ if (typeof exports !== 'undefined') {
     window.close();
   };
 }
-if (OS_IOS) {
-  $.index.open();
-} else {
-  $.index.open({
-    activityEnterAnimation: Ti.Android.R.anim.slide_in_left,
-    activityExitAnimation: Ti.Android.R.anim.slide_out_right
-  });
-}
 
-//$.index.addEventListener('open', init);
-//
-
-init();
+Home = Alloy.createController('home');
+Home.init();
+Home.getView().open();
+Home = null;

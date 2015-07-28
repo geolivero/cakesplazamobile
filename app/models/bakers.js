@@ -4,6 +4,7 @@ exports.definition = {
     URL: Alloy.Globals.baseURL + 'search/advanced-search',
     debug: false,
     timeout: 150000,
+    idAttribute: 'uid',
     adapter: {
       type: 'restapi',
       collection_name: 'bakers',

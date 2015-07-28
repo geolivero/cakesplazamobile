@@ -6,6 +6,12 @@
     fontFamily: 'OpenSans-CondensedLight'
   }
 }
+'.container' : {
+  width: Alloy.Globals.styles.box.width
+}
+'.container[platform=ios formFactor=handheld]' : {
+  statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT
+},
 '.sans': {
   font: {
     fontFamily: 'OpenSans-Light'

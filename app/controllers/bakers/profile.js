@@ -44,7 +44,7 @@ function closeMe () {
   }
 }
 function swiper (e) {
-  if (e.direction === 'left') {
+  if (e.direction === 'right') {
     closeMe();
   }
 }
